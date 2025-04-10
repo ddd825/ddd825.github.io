@@ -8,7 +8,6 @@ layout: default
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | 나의 개발 블로그</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
     header {
@@ -63,9 +62,16 @@ layout: default
   </style>
 </head>
 <body>
-  <div class="post">
-    {{ content }}
-  </div>
+  <header>나의 개발 블로그</header>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="page-wrapper">
+        <div class="post">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </main>
 
 </body>
 </html>
