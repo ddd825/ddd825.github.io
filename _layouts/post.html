@@ -14,14 +14,15 @@ layout: default
     header {
       background-color: #2B509F;
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
     }
     .page-wrapper {
       max-width: 720px;
       margin: 0 auto;
-      padding: 4rem 1rem;
+      padding: 0 1rem 4rem 1rem;
     }
     .post {
       border: none;
@@ -34,12 +35,37 @@ layout: default
       font-size: 1.1rem;
       line-height: 1.8;
     }
+    footer.site-footer {
+      border-top: 1px solid #eee;
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      color: #888;
+    }
+    footer .footer-heading {
+      font-size: 1.1rem;
+      color: #222;
+    }
+    .footer-col-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer-col {
+      flex: 1;
+      min-width: 180px;
+      margin-top: 1rem;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
+  <header>나의 개발 블로그</header>
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
-      <header>나의 개발 블로그</header>
       <div class="page-wrapper">
         <div class="post">
           {{ content }}
