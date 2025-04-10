@@ -82,6 +82,14 @@
     .post h2 {
       margin-bottom: 0.5rem;
     }
+    .post h2 a {
+      text-decoration: none;
+      color: #2B509F;
+      transition: color 0.3s;
+    }
+    .post h2 a:hover {
+      color: #1f3b73;
+    }
     .post p {
       color: #444;
     }
@@ -103,7 +111,7 @@
     <main class="content">
       <div class="category-title" id="categoryTitle">전체 글 목록</div>
       <div class="post" data-category="python">
-        <h2>파이썬 변수와 자료형 정리</h2>
+        <h2><a href="_posts/2025-04-10-my-first-post.md">파이썬 변수와 자료형 정리</a></h2>
         <p>파이썬에서 사용되는 변수의 개념과 주요 자료형(int, float, str 등)에 대해 정리합니다...</p>
       </div>
       <div class="post" data-category="numpy">
