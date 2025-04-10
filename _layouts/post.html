@@ -10,6 +10,13 @@ layout: default
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
+    header {
+      background-color: #2B509F;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
     .page-wrapper {
       max-width: 720px;
       margin: 0 auto;
@@ -29,6 +36,7 @@ layout: default
   </style>
 </head>
 <body>
+  <header>나의 개발 블로그</header>
   <div class="page-wrapper">
     <div class="post">
       {{ content }}
