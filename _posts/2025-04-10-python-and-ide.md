@@ -6,6 +6,7 @@ permalink: /posts/python-and-ide/
 categories: [python]
 ---
 
+<h2>파이썬과 IDE</h2>
 <p>파이썬을 배우기 시작하면 어떤 개발 환경을 사용할지 고민하게 됩니다.</p>
 
 <h3>대표적인 파이썬 IDE</h3>
