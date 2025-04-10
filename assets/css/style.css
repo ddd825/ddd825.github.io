@@ -18,6 +18,14 @@ header {
   font-size: 1.5rem;
 }
 
+.site-title {
+  background-color: var(--theme-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .container {
   display: grid;
   grid-template-columns: 180px 1fr;
