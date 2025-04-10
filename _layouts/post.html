@@ -9,11 +9,27 @@ layout: default
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .page-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+    }
+    .post h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .post p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+  </style>
 </head>
 <body>
-  <div class="content" style="padding: 3rem 20% 5rem 20%;">
+  <div class="page-wrapper">
     <div class="post">
-      <h2>{{ page.title }}</h2>
+      <h1>{{ page.title }}</h1>
       {{ content }}
     </div>
   </div>
