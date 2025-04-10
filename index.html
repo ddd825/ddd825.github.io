@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>나의 개발 블로그</title>
   <style>
+    :root {
+      --theme-color: #2B509F;
+      --hover-color: #e4ecff;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +17,7 @@
       flex-direction: column;
     }
     header {
-      background-color: #4caf50;
+      background-color: var(--theme-color);
       color: white;
       padding: 1rem;
       text-align: center;
@@ -31,7 +36,7 @@
     .sidebar h3 {
       margin-top: 0;
       font-size: 1.2rem;
-      border-bottom: 2px solid #4caf50;
+      border-bottom: 2px solid var(--theme-color);
       padding-bottom: 0.5rem;
     }
     .sidebar ul {
@@ -50,10 +55,10 @@
       cursor: pointer;
     }
     .sidebar a:hover {
-      color: #4caf50;
+      color: var(--theme-color);
     }
     .content {
-      padding: 2rem 4rem;
+      padding: 2rem 5rem 2rem 3rem;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
@@ -71,8 +76,8 @@
       width: 100%;
     }
     .post:hover {
-      background-color: #e0f5e0;
-      border-color: #66bb6a;
+      background-color: var(--hover-color);
+      border-color: var(--theme-color);
     }
     .post h2 {
       margin-bottom: 0.5rem;
