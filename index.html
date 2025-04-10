@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -62,10 +63,30 @@
       flex-direction: column;
       gap: 1.5rem;
     }
+    .search-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .search-bar input[type="text"] {
+      flex: 1;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-bar button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: var(--theme-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
     .category-title {
       font-size: 1.3rem;
       font-weight: bold;
-      margin-bottom: 1rem;
     }
     .post {
       border: 1px solid #ccc;
@@ -104,8 +125,13 @@
       </ul>
     </aside>
     <main class="content">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="검색어를 입력하세요...">
+        <button onclick="searchPosts()">검색</button>
+      </div>
       <div class="category-title" id="categoryTitle">전체 글 목록</div>
-      <div class="post" data-category="python">
+
+      <div class="post" data-category="python" data-title="파이썬과 IDE">
         <h2><a href="/posts/python-and-ide/">파이썬과 IDE</a></h2>
         <p>파이썬 개발 환경(IDE)의 종류와 특징을 간단히 정리한 글입니다.</p>
       </div>
@@ -135,6 +161,29 @@
         };
         title.textContent = categoryName[category] || '글 목록';
       }
+    }
+
+    function searchPosts() {
+      const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+      const posts = document.querySelectorAll('.post');
+      const title = document.getElementById('categoryTitle');
+
+      if (keyword === '') {
+        posts.forEach(post => post.style.display = 'block');
+        title.textContent = '전체 글 목록';
+        return;
+      }
+
+      posts.forEach(post => {
+        const postTitle = post.getAttribute('data-title').toLowerCase();
+        if (postTitle.includes(keyword)) {
+          post.style.display = 'block';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+
+      title.textContent = `"${keyword}"의 검색 결과 :`;
     }
   </script>
 </body>
