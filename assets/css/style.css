@@ -103,6 +103,20 @@ header {
   font-weight: bold;
 }
 
+.write-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #2B509F;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.write-button:hover {
+  background-color: #1f3f85;
+}
+
+
 .post {
   border: 1px solid #ccc;
   border-radius: 10px;
