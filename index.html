@@ -18,39 +18,56 @@
       text-align: center;
       font-size: 1.5rem;
     }
-    nav {
-      background-color: #388e3c;
-      color: white;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.75rem 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
     .container {
       display: flex;
       flex: 1;
       min-height: 100vh;
     }
     .sidebar {
-      width: 200px;
-      background-color: #f0f0f0;
-      padding: 1rem;
-      border-right: 1px solid #ccc;
+      width: 220px;
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-right: 1px solid #ddd;
     }
     .sidebar h3 {
       margin-top: 0;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #4caf50;
+      padding-bottom: 0.5rem;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      margin-bottom: 0.75rem;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .sidebar a:hover {
+      color: #4caf50;
     }
     .content {
       flex: 1;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
     .post {
-      margin-bottom: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    .post:hover {
+      background-color: #e0f5e0;
+      border-color: #66bb6a;
     }
     .post h2 {
       margin-bottom: 0.5rem;
@@ -62,11 +79,6 @@
 </head>
 <body>
   <header>나의 개발 블로그</header>
-  <nav>
-    <a href="#">홈</a>
-    <a href="#">소개</a>
-    <a href="#">문의</a>
-  </nav>
   <div class="container">
     <aside class="sidebar">
       <h3>카테고리</h3>
