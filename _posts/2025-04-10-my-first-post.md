@@ -7,3 +7,4 @@ title: 파이썬 기초 정리
 
 ```python
 print("Hello, world!")
+```
